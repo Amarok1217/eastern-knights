@@ -1,0 +1,13 @@
+$bgColor: rgba(43, 29, 21, 1);
+$headerColor: rgba(31, 20, 13, 1);
+.bg-bgColor {
+  background-color: $bgColor;
+}
+.bg-headerColor {
+  background-color: $headerColor;
+}
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

@@ -1,0 +1,19 @@
+.header {
+  width: 1440px;
+  height: 86px;
+  padding-left: 113px;
+  .headerText {
+    height: 100%;
+    font-size: 20px;
+    // font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 86px;
+    margin-left: 40px;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+  .headerText:hover {
+    color: rgba(255, 143, 69, 1);
+  }
+}
