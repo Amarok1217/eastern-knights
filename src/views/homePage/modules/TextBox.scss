@@ -1,0 +1,53 @@
+@import '@/styles/color';
+.trailerTextBox {
+  padding-left: 113px;
+  > * {
+    opacity: 0;
+    animation: 0.5s textShow ease-out;
+    animation-fill-mode: forwards;
+  }
+  .trailerTag {
+    height: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: $textColor;
+    line-height: 20px;
+    margin-top: 144px;
+    animation-delay: 0.1s;
+  }
+  .trailerTitle {
+    width: 447px;
+    font-size: 52px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 71px;
+    margin-top: 16px;
+    animation-delay: 0.2s;
+  }
+  .trailerDetail {
+    width: 334px;
+    font-size: 16px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #96877d;
+    line-height: 22px;
+    margin-top: 16px;
+    animation-delay: 0.3s;
+  }
+  .goDetail {
+    width: 161px;
+    color: #2b1e15;
+    margin-top: 40px;
+    animation-delay: 0.4s;
+  }
+}
+@keyframes textShow {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

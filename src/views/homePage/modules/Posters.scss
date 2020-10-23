@@ -1,0 +1,36 @@
+@import '@/styles/color';
+.posterBox {
+  position: relative;
+  height: 100%;
+  padding-right: 113px;
+  overflow: hidden;
+  > * {
+    opacity: 0;
+    animation: 0.5s postShow ease-out;
+    animation-fill-mode: forwards;
+  }
+  .hoverColor {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(30deg, $bgColor, rgba(255, 255, 255, 0));
+  }
+  .bgImg {
+    height: 100%;
+    // object-fit: none;
+    width: 400px;
+    object-fit: cover;
+  }
+}
+@keyframes postShow {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

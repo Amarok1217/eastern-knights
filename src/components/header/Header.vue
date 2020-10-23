@@ -1,5 +1,5 @@
 <template>
-  <span class="header bg-headerColor flex-row-center">
+  <span class="headerBox bg-headerColor flex-row-center">
     <p
       class="headerText"
       v-for="(item,index) in tagList"

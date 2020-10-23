@@ -1,7 +1,10 @@
 <template>
-  <div class="homePage bg-bgColor">
-    <Header @goPage="goPage"></Header>
-    <router-view />
+  <div class="home bg-bgColor">
+    <Header
+      class="header"
+      @goPage="goPage"
+    ></Header>
+    <router-view class="router" />
   </div>
 </template>
 

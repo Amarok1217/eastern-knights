@@ -1,0 +1,11 @@
+.homePage {
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  .bottomBox {
+    position: absolute;
+    bottom: 0;
+    left: 113px;
+  }
+}

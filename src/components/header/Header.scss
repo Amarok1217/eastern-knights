@@ -1,5 +1,5 @@
 @import '@/styles/color';
-.header {
+.headerBox {
   width: 1440px;
   height: 86px;
   .headerText {
@@ -17,6 +17,7 @@
     animation-fill-mode: forwards;
     opacity: 0;
     margin-right: 10px;
+    border-color: $bgColor;
   }
   .headerText:hover {
     color: $btnColor;
