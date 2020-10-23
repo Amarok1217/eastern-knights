@@ -1,22 +1,43 @@
+@import '@/styles/color';
 .header {
   width: 1440px;
   height: 86px;
   .headerText {
     height: 100%;
     font-size: 20px;
+    color: #ffffff;
     // font-family: PingFangSC-Semibold, PingFang SC;
     font-weight: 600;
-    color: #ffffff;
     line-height: 86px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 35px;
+    padding-right: 35px;
     margin: 0px;
     cursor: pointer;
+    animation: 0.3s eventCome ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    margin-right: 10px;
   }
   .headerText:hover {
-    color: rgba(255, 143, 69, 1);
+    color: $btnColor;
+    border-bottom: $btnColor solid 1px;
+    transition: 0.3s ease-out;
+  }
+  .currentHeader {
+    color: $btnColor;
+    border-bottom: $btnColor solid 1px;
   }
   :first-child {
     margin-left: 73px;
+  }
+}
+@keyframes eventCome {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }

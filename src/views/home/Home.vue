@@ -1,6 +1,7 @@
 <template>
   <div class="homePage bg-bgColor">
-    <Header></Header>
+    <Header @goPage="goPage"></Header>
+    <router-view />
   </div>
 </template>
 
@@ -12,7 +13,11 @@ export default {
   data() {
     return {}
   },
-  methods: {}
+  methods: {
+    goPage(pageName) {
+      this.$router.push(pageName)
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>

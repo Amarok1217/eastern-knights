@@ -3,7 +3,10 @@
     <p
       class="headerText"
       v-for="(item,index) in tagList"
+      :class="`/${item.pageName}`== $route.path?'currentHeader':''"
+      :style="`animation-delay:${index * 0.1}s`"
       :key="index"
+      @click="selectHeader(item)"
     >{{item.label}}</p>
   </span>
 </template>
@@ -14,15 +17,36 @@ export default {
     return {
       tagList: [
         {
-          label: '官方动态'
+          label: '首页',
+          id: 0,
+          pageName: 'homePage'
         },
         {
-          label: '资料库'
+          label: '官方动态',
+          id: 1,
+          pageName: 'officialMsg'
         },
         {
-          label: '关于'
+          label: '资料库',
+          id: 2,
+          pageName: 'wiki'
+        },
+        {
+          label: '关于',
+          id: 3,
+          pageName: 'about'
         }
-      ]
+      ],
+      currentId: 0
+    }
+  },
+  mounted() {
+    console.log(this.$route.path)
+  },
+  methods: {
+    selectHeader(item) {
+      this.currentId = item.id
+      this.$emit('goPage', item.pageName)
     }
   }
 }
