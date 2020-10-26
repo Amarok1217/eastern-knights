@@ -6,6 +6,7 @@
 
 <style lang="scss">
 @import '@/styles/global';
+@import '@/styles/color';
 html,
 body {
   margin: 0px;
@@ -19,6 +20,15 @@ body {
     -webkit-margin-after: 0em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
+  }
+  ::-webkit-scrollbar {
+    background-color: $bgColor;
+    width: 8px;
+    // background-color: antiquewhite;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $textColor;
   }
 }
 #app {
