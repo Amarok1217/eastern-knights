@@ -2,7 +2,8 @@
   width: 100%;
   justify-content: space-between;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
+  // overflow-x: hidden;
   .bottomBox {
     position: absolute;
     bottom: 0;
