@@ -3,9 +3,6 @@
     <el-menu
       default-active="wikiFigures"
       class="wikiMenu"
-      :background-color="mColor.menuBgColor"
-      text-color="#ffffff"
-      :active-text-color="mColor.btnColor"
       :router="true"
     >
       <el-menu-item index="wikiFigures">

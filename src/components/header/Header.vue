@@ -40,9 +40,7 @@ export default {
       currentId: 0
     }
   },
-  mounted() {
-    console.log(this.$route.path)
-  },
+  mounted() {},
   methods: {
     selectHeader(item) {
       this.currentId = item.id

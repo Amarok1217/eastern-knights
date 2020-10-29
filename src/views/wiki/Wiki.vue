@@ -6,32 +6,16 @@
 </template>
 <script type="text/ecmascript-6">
 import WikiMenu from './modules/wikiMenu/WikiMenu'
-import { getFigureList } from '@/request/figures'
-import color from '@/styles/color.scss'
 export default {
   name: 'Wiki',
   components: {
     WikiMenu
   },
   data() {
-    return {
-      mColor: color
-    }
+    return {}
   },
-  mounted() {
-    console.log(color)
-    this.initList()
-  },
-  methods: {
-    initList() {
-      let params = {
-        id: 0
-      }
-      getFigureList(params).then((res) => {
-        console.log(res)
-      })
-    }
-  }
+  mounted() {},
+  methods: {}
 }
 </script>
 <style lang="scss" scoped>

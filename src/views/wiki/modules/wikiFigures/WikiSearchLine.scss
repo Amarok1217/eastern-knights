@@ -1,0 +1,22 @@
+.searchLine {
+  margin-top: 25px;
+  .searchTag {
+    //   width: 48px;
+    padding-left: 15px;
+    padding-right: 10px;
+    height: 17px;
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 17px;
+  }
+  .searchSelect {
+    width: 120px;
+    margin-right: 15px;
+    ::-webkit-scrollbar {
+      opacity: 0;
+      // background-color: antiquewhite;
+    }
+  }
+}

@@ -21,15 +21,15 @@ body {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
   }
-  ::-webkit-scrollbar {
-    background-color: $bgColor;
-    width: 8px;
-    // background-color: antiquewhite;
-  }
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: $textColor;
-  }
+  // ::-webkit-scrollbar {
+  //   background-color: $bgColor;
+  //   width: 8px;
+  //   // background-color: antiquewhite;
+  // }
+  // ::-webkit-scrollbar-thumb {
+  //   border-radius: 10px;
+  //   background-color: $textColor;
+  // }
 }
 #app {
   height: 100%;
