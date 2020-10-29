@@ -3,7 +3,7 @@
     <p
       class="headerText"
       v-for="(item,index) in tagList"
-      :class="`/${item.pageName}`== $route.path?'currentHeader':''"
+      :class="!$route.path.indexOf(item.pageName)?'currentHeader':''"
       :style="`animation-delay:${index * 0.1}s`"
       :key="index"
       @click="selectHeader(item)"
@@ -19,22 +19,22 @@ export default {
         {
           label: '首页',
           id: 0,
-          pageName: 'homePage'
+          pageName: '/homePage'
         },
         {
           label: '官方动态',
           id: 1,
-          pageName: 'officialMsg'
+          pageName: '/officialMsg'
         },
         {
           label: '资料库',
           id: 2,
-          pageName: 'wiki'
+          pageName: '/wiki'
         },
         {
           label: '关于',
           id: 3,
-          pageName: 'about'
+          pageName: '/about'
         }
       ],
       currentId: 0

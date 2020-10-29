@@ -6,6 +6,8 @@ import OfficialMsg from '@/views/officialMsg/OfficialMsg'
 import Wiki from '@/views/wiki/Wiki'
 import About from '@/views/about/About'
 
+import WikiFigures from '@/views/wiki/modules/wikiFigures/WikiFigures'
+
 Vue.use(Router)
 
 export default new Router({
@@ -14,25 +16,33 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
-      redirect: 'homePage',
+      redirect: '/homePage',
       children: [
         {
-          path: 'homePage',
+          path: '/homePage',
           name: 'homePage',
           component: HomePage
         },
         {
-          path: 'officialMsg',
+          path: '/officialMsg',
           name: 'officialMsg',
           component: OfficialMsg
         },
         {
-          path: 'Wiki',
+          path: '/wiki',
           name: 'wiki',
-          component: Wiki
+          component: Wiki,
+          redirect: 'wiki/wikiFigures',
+          children: [
+            {
+              path: 'wikiFigures',
+              name: 'wikiFigures',
+              component: WikiFigures
+            }
+          ]
         },
         {
-          path: 'about',
+          path: '/about',
           name: 'about',
           component: About
         }

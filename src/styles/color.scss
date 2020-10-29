@@ -1,4 +1,12 @@
 $bgColor: rgba(43, 29, 21, 1);
 $headerColor: rgba(31, 20, 13, 1);
 $btnColor: rgba(255, 143, 69, 1);
-$textColor: rgba(150, 135, 125, 1);
+$textColor: rgb(184, 161, 145);
+$menuBgColor: rgb(87, 61, 46);
+:export {
+  bgColor: $bgColor;
+  headerColor: $headerColor;
+  btnColor: $btnColor;
+  textColor: $textColor;
+  menuBgColor: $menuBgColor;
+}
