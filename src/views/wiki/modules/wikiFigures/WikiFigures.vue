@@ -10,6 +10,7 @@
         v-for="(item,index) in figureList"
         :key="index"
         :figureData="{index,...item}"
+        @click.native="goDetail(item)"
       ></FigureItem>
     </section>
   </div>
@@ -47,6 +48,14 @@ export default {
           this.figureList = res.data.data
         })
         console.log(res.data.data)
+      })
+    },
+    goDetail(item) {
+      this.$router.push({
+        name: 'figureDetail',
+        query: {
+          id: item.id
+        }
       })
     }
   }

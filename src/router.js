@@ -7,6 +7,7 @@ import Wiki from '@/views/wiki/Wiki'
 import About from '@/views/about/About'
 
 import WikiFigures from '@/views/wiki/modules/wikiFigures/WikiFigures'
+import FigureDetail from '@/views/wiki/modules/figure/FigureDetail'
 
 Vue.use(Router)
 
@@ -38,6 +39,11 @@ export default new Router({
               path: 'wikiFigures',
               name: 'wikiFigures',
               component: WikiFigures
+            },
+            {
+              path: 'figureDetail',
+              name: 'figureDetail',
+              component: FigureDetail
             }
           ]
         },

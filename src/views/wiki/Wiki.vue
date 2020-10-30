@@ -1,5 +1,5 @@
 <template>
-  <div class="wikiPage flex-row-center">
+  <div class="wikiPage flex-row">
     <WikiMenu></WikiMenu>
     <router-view class="wikiRouter" />
   </div>

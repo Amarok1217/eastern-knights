@@ -40,3 +40,13 @@ export const getArr = (obj) => {
   }
   return result
 }
+export const getKey = (value, obj) => {
+  for (const key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      const element = obj[key]
+      if (value === element) {
+        return key
+      }
+    }
+  }
+}
