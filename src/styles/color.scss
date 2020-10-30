@@ -3,10 +3,32 @@ $headerColor: rgba(31, 20, 13, 1);
 $btnColor: rgba(255, 143, 69, 1);
 $textColor: rgb(184, 161, 145);
 $menuBgColor: rgb(87, 61, 46);
+
+$armyOfLeodysseus: #fa2c35;
+$theLegionOfArethyr: #e76740;
+$theOrderOfEathyron: #fbf87a;
+$theCongregationOfNecronominus: #cdcdcd;
+$xylonasFlock: #90ce43;
+$illythiasBrood: #7e67e9;
+$theConvocationOfBassylia: #52dcf4;
+$theCircleOfPoxxus: #5291e5;
+$theHouseOfTheNobleBear:#E09484;
+$theSonsOfTheRedStar:#F245D9;
+
 :export {
   bgColor: $bgColor;
   headerColor: $headerColor;
   btnColor: $btnColor;
   textColor: $textColor;
   menuBgColor: $menuBgColor;
+  armyOfLeodysseus:$armyOfLeodysseus;
+  theLegionOfArethyr:$theLegionOfArethyr;
+  theOrderOfEathyron:$theOrderOfEathyron;
+  theCongregationOfNecronominus:$theCongregationOfNecronominus;
+  xylonasFlock:$xylonasFlock;
+  illythiasBrood:$illythiasBrood;
+  theConvocationOfBassylia:$theConvocationOfBassylia;
+  theCircleOfPoxxus:$theCircleOfPoxxus;
+  theHouseOfTheNobleBear:$theHouseOfTheNobleBear;
+  theSonsOfTheRedStar:$theSonsOfTheRedStar;
 }

@@ -1,26 +1,63 @@
-.figureItem {
-  width: 200px;
-  height: 300px;
-  margin-right: 20px;
-  margin-top: 20px;
-  background-size: cover;
-  position: relative;
-  border-radius: 10px;
-  .infoBox {
-    width: 100%;
-    height: 70px;
-    background-color: rgba(0, 3, 7, 0.7);
-    bottom: 0;
-    position: absolute;
-    border-radius: 0 0 10px 10px;
-    .name {
-      height: 22px;
-      font-size: 16px;
-      font-weight: 500;
-      color: #ffffff;
-      line-height: 22px;
-      margin-left: 10px;
-      margin-top: 10px;
+@import '@/styles/color';
+.figureItemBox {
+  animation: 0.5s figureShow ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  .figureItem {
+    width: 200px;
+    height: 300px;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-size: cover;
+    position: relative;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0px 0px 5px black;
+    .infoBox {
+      width: 100%;
+      height: 70px;
+      background-color: rgba(0, 3, 7, 0.7);
+      bottom: 0;
+      position: absolute;
+      border-radius: 0 0 10px 10px;
+      .name {
+        height: 22px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #ffffff;
+        line-height: 22px;
+        margin-left: 10px;
+        margin-top: 10px;
+      }
+      .faction {
+        height: 20px;
+        border-radius: 5px 0px 5px 0px;
+        font-size: 9px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #000000;
+        line-height: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
     }
+  }
+  .figureItem:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px black;
+  }
+}
+@keyframes figureShow {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }

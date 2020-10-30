@@ -9,7 +9,7 @@
       <FigureItem
         v-for="(item,index) in figureList"
         :key="index"
-        :figureData="item"
+        :figureData="{index,...item}"
       ></FigureItem>
     </section>
   </div>
@@ -42,7 +42,10 @@ export default {
       }
       console.log(params)
       getFigureList(params).then((res) => {
-        this.figureList = res.data.data
+        this.figureList = []
+        this.$nextTick(() => {
+          this.figureList = res.data.data
+        })
         console.log(res.data.data)
       })
     }
