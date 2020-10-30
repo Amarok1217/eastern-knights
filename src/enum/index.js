@@ -1,15 +1,18 @@
 export const wave = {
   all: '全部波次',
-  arethyr: '炎魔'
+  arethyr: '炎魔',
+  covenantOfShadows: '暗影契约'
 }
 export const race = {
   all: '全部种族',
-  human: '人类'
+  human: '人类',
+  vampire: '吸血鬼'
 }
 export const role = {
   all: '全部职业',
+  leader: '领袖',
   advisor: '顾问',
-  leader: '领袖'
+  warlord: '战争领主'
 }
 export const faction = {
   all: '全部阵营',

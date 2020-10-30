@@ -7,6 +7,12 @@
       class="figureItem"
       :style="`background-image:url(${figureData.cover});`"
     >
+      <img
+        class="crown"
+        src="https://zbd-image.oss-cn-hangzhou.aliyuncs.com/eastern-knights/%E7%B4%A0%E6%9D%90/crown_767.36778846154px_1284419_easyicon.net.png"
+        alt=""
+        v-if="figureData.role==='leader'"
+      >
       <div class="infoBox flex-column">
         <p class="name">{{figureData.cnName}}</p>
         <p
