@@ -6,13 +6,21 @@ export const wave = {
 export const race = {
   all: '全部种族',
   human: '人类',
-  vampire: '吸血鬼'
+  demon: '恶魔',
+  vampire: '吸血鬼',
+  goblin: '哥布林',
+  lesserDemon: '小恶魔',
+  unknown: '未知'
 }
 export const role = {
   all: '全部职业',
   leader: '领袖',
   advisor: '顾问',
-  warlord: '战争领主'
+  warlord: '战争领主',
+  darkPrince: '黑暗王子',
+  soldier: '战士',
+  commander: '指挥官',
+  god: '神'
 }
 export const faction = {
   all: '全部阵营',

@@ -1,5 +1,12 @@
 <template>
   <div class="figureDetail">
+    <el-button
+      class="backBtn"
+      type="primary"
+      icon="el-icon-arrow-left"
+      size="small"
+      @click="goBack"
+    >返回</el-button>
     <span class="nameLine flex-row-bottom">
       <p class="cnName">{{figureDetail.cnName}}</p>
       <p class="name">{{figureDetail.name}}</p>
@@ -10,6 +17,7 @@
           class="infoLine flex-row-center"
           v-for="(item,index) in infoList"
           :key="index"
+          :style="`animation-delay: ${0.05*index}s;`"
         >
           <p class="label">{{item.label}}</p>
           <el-tag
@@ -35,6 +43,7 @@
           class="imgItem"
           :src="item"
           :style="`animation-delay: ${0.05*index}s;`"
+          @load="loopLoadImg(index+1)"
         />
       </div>
     </div>
@@ -50,7 +59,8 @@ export default {
     return {
       figureDetail: {},
       infoList: [],
-      imgList: []
+      imgList: [],
+      imgDataList: []
     }
   },
   mounted() {
@@ -80,13 +90,21 @@ export default {
             label: '波次',
             value: wave[this.figureDetail.wave]
           })
-
-          this.imgList = this.figureDetail.imgList.split(',')
+          this.imgDataList = this.figureDetail.imgList.split(',')
+          this.loopLoadImg(0)
         }
       })
     },
+    loopLoadImg(index) {
+      if (index < this.imgDataList.length) {
+        this.imgList.push(this.imgDataList[index])
+      }
+    },
     goList(index, value) {
       console.log(index, value)
+    },
+    goBack() {
+      window.history.go(-1)
     }
   }
 }

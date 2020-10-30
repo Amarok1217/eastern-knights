@@ -61,6 +61,10 @@
       type="primary"
       @click="startSearch"
     >搜索</el-button>
+    <el-button
+      size="small"
+      @click="restSearch"
+    >重置</el-button>
   </section>
 </template>
 <script type="text/ecmascript-6">
@@ -85,6 +89,13 @@ export default {
   methods: {
     startSearch() {
       this.$emit('startSearch')
+    },
+    restSearch() {
+      this.wave = 'all'
+      this.race = 'all'
+      this.role = 'all'
+      this.faction = 'all'
+      this.startSearch()
     }
   }
 }

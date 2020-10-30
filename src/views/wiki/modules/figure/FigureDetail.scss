@@ -2,9 +2,16 @@
   width: 100%;
   min-height: 100%;
   padding-left: 25px;
+  padding-bottom: 25px;
   background-color: rgba(239, 243, 246, 1);
+  .backBtn {
+    margin-top: 25px;
+  }
   .nameLine {
     margin-top: 25px;
+    animation: 0.5s infoShow ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
     .cnName {
       font-size: 30px;
       font-weight: 600;
@@ -19,6 +26,9 @@
   .infoBox {
     .infoLine {
       margin-top: 15px;
+      animation: 0.5s infoShow ease-out;
+      opacity: 0;
+      animation-fill-mode: forwards;
       .label {
         font-size: 14px;
       }
@@ -35,6 +45,9 @@
     padding-left: 35px;
     padding-right: 15px;
     max-width: 500px;
+    animation: 0.5s infoShow ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
   }
   .imgLine {
     flex-wrap: wrap;
@@ -67,6 +80,16 @@
   0% {
     opacity: 0;
     transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes infoShow {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
   }
   100% {
     opacity: 1;
