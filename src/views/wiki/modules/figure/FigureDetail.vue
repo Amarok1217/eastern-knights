@@ -34,6 +34,7 @@
         <img
           class="imgItem"
           :src="item"
+          :style="`animation-delay: ${0.05*index}s;`"
         />
       </div>
     </div>
