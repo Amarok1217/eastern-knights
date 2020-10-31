@@ -1,15 +1,18 @@
 export const wave = {
   all: '全部波次',
   arethyr: '炎魔',
+  wasteland: '荒原',
   covenantOfShadows: '暗影契约'
 }
 export const race = {
   all: '全部种族',
   human: '人类',
   demon: '恶魔',
+  orc: '兽人',
   vampire: '吸血鬼',
   goblin: '哥布林',
   lesserDemon: '小恶魔',
+  cyclops: '独眼巨人',
   unknown: '未知'
 }
 export const role = {
@@ -18,8 +21,10 @@ export const role = {
   advisor: '顾问',
   warlord: '战争领主',
   darkPrince: '黑暗王子',
-  soldier: '战士',
+  soldier: '士兵',
+  warrior: '勇士',
   commander: '指挥官',
+  chiefOverseer: '首席督战官',
   god: '神'
 }
 export const faction = {

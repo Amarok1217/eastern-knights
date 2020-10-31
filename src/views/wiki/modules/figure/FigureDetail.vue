@@ -96,9 +96,11 @@ export default {
       })
     },
     loopLoadImg(index) {
-      if (index < this.imgDataList.length) {
-        this.imgList.push(this.imgDataList[index])
-      }
+      setTimeout(() => {
+        if (index < this.imgDataList.length) {
+          this.imgList.push(this.imgDataList[index])
+        }
+      }, 100)
     },
     goList(index, value) {
       console.log(index, value)
