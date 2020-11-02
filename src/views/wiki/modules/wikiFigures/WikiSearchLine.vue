@@ -84,7 +84,6 @@ export default {
     }
   },
   mounted() {
-    this.startSearch()
   },
   methods: {
     startSearch() {

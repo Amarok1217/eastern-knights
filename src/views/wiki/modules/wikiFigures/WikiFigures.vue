@@ -7,11 +7,24 @@
     ></WikiSearchLine>
     <section class="figureList flex-row-center">
       <FigureItem
+        class="listItem"
         v-for="(item,index) in figureList"
         :key="index"
         :figureData="{index,...item}"
         @click.native="goDetail(item)"
       ></FigureItem>
+    </section>
+    <section class="pageBox flex-column-center">
+      <el-pagination
+        background
+        layout="prev, pager, next"
+        :total="total"
+        :current-page="pageNo"
+        @current-change="changePageNum"
+        :page-size="pageSize"
+        hide-on-single-page
+      >
+      </el-pagination>
     </section>
   </div>
 </template>
@@ -28,27 +41,38 @@ export default {
   },
   data() {
     return {
-      figureList: []
+      figureList: [],
+      total: 0,
+      pageSize: 12,
+      pageNo: 1
     }
   },
-  mounted() {},
+  mounted() {
+    this.initList()
+  },
   methods: {
     initList() {
-      console.log(this.$refs)
       let params = {
         wave: this.$refs.wikiSearchLine.wave,
         race: this.$refs.wikiSearchLine.race,
         role: this.$refs.wikiSearchLine.role,
-        faction: this.$refs.wikiSearchLine.faction
+        faction: this.$refs.wikiSearchLine.faction,
+        pageSize: this.pageSize,
+        pageNo: this.pageNo
       }
       console.log(params)
       getFigureList(params).then((res) => {
         this.figureList = []
+        this.total = res.data.data.total
         this.$nextTick(() => {
-          this.figureList = res.data.data
+          this.figureList = res.data.data.res
         })
         console.log(res.data.data)
       })
+    },
+    changePageNum(num) {
+      this.pageNum = num
+      this.initData()
     },
     goDetail(item) {
       this.$router.push({
