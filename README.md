@@ -1,24 +1,3 @@
-# eastern-knight
-
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# 1.0.0 -20201102
+- 基础版本 添加首页，人物
+- 数据更新了炎魔、潮腐
