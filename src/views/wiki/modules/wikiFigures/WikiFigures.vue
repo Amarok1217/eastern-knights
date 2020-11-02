@@ -71,8 +71,8 @@ export default {
       })
     },
     changePageNum(num) {
-      this.pageNum = num
-      this.initData()
+      this.pageNo = num
+      this.initList()
     },
     goDetail(item) {
       this.$router.push({

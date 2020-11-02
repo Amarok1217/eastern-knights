@@ -11,6 +11,7 @@ export const race = {
   orc: '兽人',
   vampire: '吸血鬼',
   goblin: '哥布林',
+  jaguallian: '豹人',
   lesserDemon: '小恶魔',
   cyclops: '独眼巨人',
   unknown: '未知'
@@ -19,7 +20,9 @@ export const role = {
   all: '全部职业',
   leader: '领袖',
   advisor: '顾问',
+  destroyer: '毁灭者',
   warlord: '战争领主',
+  swordsman: '剑士',
   darkPrince: '黑暗王子',
   soldier: '士兵',
   warrior: '勇士',
