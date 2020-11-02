@@ -3,7 +3,7 @@
     <p class="title">人物</p>
     <WikiSearchLine
       ref="wikiSearchLine"
-      @startSearch="initList"
+      @startSearch="startSearch"
     ></WikiSearchLine>
     <section class="figureList flex-row-center">
       <FigureItem
@@ -51,6 +51,10 @@ export default {
     this.initList()
   },
   methods: {
+    startSearch() {
+      this.pageNo = 1
+      this.initList()
+    },
     initList() {
       let params = {
         wave: this.$refs.wikiSearchLine.wave,
@@ -60,7 +64,6 @@ export default {
         pageSize: this.pageSize,
         pageNo: this.pageNo
       }
-      console.log(params)
       getFigureList(params).then((res) => {
         this.figureList = []
         this.total = res.data.data.total

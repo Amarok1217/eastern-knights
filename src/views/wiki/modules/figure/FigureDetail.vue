@@ -32,7 +32,7 @@
     </span>
     <div
       class="imgLine flex-row"
-      v-viewer="{navbar:false,title:false,toolbar:false}"
+      v-viewer="{navbar:true,title:false,toolbar:false}"
     >
       <div
         class="imgBox"
@@ -60,7 +60,8 @@ export default {
       figureDetail: {},
       infoList: [],
       imgList: [],
-      imgDataList: []
+      imgDataList: [],
+      options: { movable: true, zoomable: true }
     }
   },
   mounted() {
@@ -113,4 +114,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import './FigureDetail';
+</style>
+<style lang="scss">
 </style>

@@ -8,6 +8,7 @@ export const race = {
   all: '全部种族',
   human: '人类',
   demon: '恶魔',
+  dwarf: '矮人',
   orc: '兽人',
   vampire: '吸血鬼',
   goblin: '哥布林',
