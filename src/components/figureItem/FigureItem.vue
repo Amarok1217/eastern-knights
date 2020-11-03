@@ -5,7 +5,7 @@
   >
     <div
       class="figureItem"
-      :style="`background-image:url(${figureData.cover});`"
+      :style="`background-image:url(${figureData.cover}?x-oss-process=style/zip);`"
     >
       <img
         class="crown"

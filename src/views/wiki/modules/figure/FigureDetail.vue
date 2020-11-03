@@ -48,7 +48,7 @@
       >
         <img
           class="imgItem"
-          :src="item"
+          :src="item+'?x-oss-process=style/zip'"
           :style="`animation-delay: ${0.05*index}s;`"
           @load="loopLoadImg(index+1)"
         />

@@ -32,6 +32,7 @@ export const role = {
   commander: '指挥官',
   chiefOverseer: '首席督战官',
   hero: '英雄',
+  cleric: '牧师',
   god: '神'
 }
 export const faction = {
