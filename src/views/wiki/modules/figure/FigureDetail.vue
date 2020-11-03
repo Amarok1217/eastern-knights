@@ -48,7 +48,7 @@
       >
         <img
           class="imgItem"
-          :src="publicPath+item"
+          :src="item"
           :style="`animation-delay: ${0.05*index}s;`"
           @load="loopLoadImg(index+1)"
         />

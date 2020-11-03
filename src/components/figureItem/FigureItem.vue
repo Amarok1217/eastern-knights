@@ -5,7 +5,7 @@
   >
     <div
       class="figureItem"
-      :style="`background-image:url(${publicPath+figureData.cover});`"
+      :style="`background-image:url(${figureData.cover});`"
     >
       <img
         class="crown"
