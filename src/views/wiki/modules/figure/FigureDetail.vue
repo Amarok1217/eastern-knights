@@ -48,7 +48,7 @@
       >
         <img
           class="imgItem"
-          :src="item"
+          :src="publicPath+item"
           :style="`animation-delay: ${0.05*index}s;`"
           @load="loopLoadImg(index+1)"
         />
@@ -68,7 +68,8 @@ export default {
       infoList: [],
       imgList: [],
       imgDataList: [],
-      options: { movable: true, zoomable: true }
+      options: { movable: true, zoomable: true },
+      publicPath: process.env.BASE_URL
     }
   },
   mounted() {

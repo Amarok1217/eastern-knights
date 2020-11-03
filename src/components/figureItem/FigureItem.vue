@@ -5,7 +5,7 @@
   >
     <div
       class="figureItem"
-      :style="`background-image:url(${figureData.cover});`"
+      :style="`background-image:url(${publicPath+figureData.cover});`"
     >
       <img
         class="crown"
@@ -34,7 +34,8 @@ export default {
   data() {
     return {
       faction: '',
-      factionColor: ''
+      factionColor: '',
+      publicPath: process.env.BASE_URL
     }
   },
   mounted() {

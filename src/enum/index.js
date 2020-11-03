@@ -2,6 +2,7 @@ export const wave = {
   all: '全部波次',
   arethyr: '炎魔',
   wasteland: '荒原',
+  siegeAtBjorngar: '围城',
   covenantOfShadows: '暗影契约'
 }
 export const race = {
@@ -15,6 +16,7 @@ export const race = {
   jaguallian: '豹人',
   lesserDemon: '小恶魔',
   cyclops: '独眼巨人',
+  halfGiant: '半巨人',
   unknown: '未知'
 }
 export const role = {
@@ -29,6 +31,7 @@ export const role = {
   warrior: '勇士',
   commander: '指挥官',
   chiefOverseer: '首席督战官',
+  hero: '英雄',
   god: '神'
 }
 export const faction = {
