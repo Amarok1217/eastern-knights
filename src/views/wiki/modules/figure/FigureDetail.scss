@@ -1,3 +1,4 @@
+@import '@/styles/color';
 .figureDetail {
   width: 100%;
   min-height: 100%;
@@ -34,10 +35,15 @@
         font-size: 14px;
       }
       .value {
-        font-size: 14px;
+        // font-size: 14px;
         margin-left: 15px;
-        cursor: pointer;
+        // cursor: pointer;
       }
+      // .value:hover {
+      //   transition: all 0.2s;
+      //   transform: scale(1.1);
+      //   box-shadow: 0px 0px 15px $btnColor;
+      // }
     }
   }
   .biography {

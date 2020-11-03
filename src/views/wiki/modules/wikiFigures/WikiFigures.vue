@@ -48,7 +48,11 @@ export default {
     }
   },
   mounted() {
-    this.initList()
+    console.log(this.$route.params)
+    if (Object.keys(this.$route.params).length > 0) {
+      this.$refs.wikiSearchLine.initSearchCfg(this.$route.params)
+    }
+    this.$refs.wikiSearchLine.startSearch()
   },
   methods: {
     startSearch() {

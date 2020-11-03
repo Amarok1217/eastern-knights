@@ -80,12 +80,17 @@ export default {
       role: 'all',
       roleOptions: getArr(role),
       faction: 'all',
-      factionOptions: getArr(faction)
+      factionOptions: getArr(faction),
+      tagList: ['faction', 'race', 'role', 'wave']
     }
   },
-  mounted() {
-  },
+  mounted() {},
   methods: {
+    initSearchCfg(params) {
+      console.log(params)
+      this[this.tagList[params.index]] = params.originValue
+      console.log(this.faction)
+    },
     startSearch() {
       this.$emit('startSearch')
     },

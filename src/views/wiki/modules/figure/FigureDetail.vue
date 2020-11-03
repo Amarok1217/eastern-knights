@@ -20,10 +20,17 @@
           :style="`animation-delay: ${0.05*index}s;`"
         >
           <p class="label">{{item.label}}</p>
-          <el-tag
+          <!-- <el-tag
             class="value"
-            @click="goList(index,item.value)"
-          >{{item.value}}</el-tag>
+            @click="goList(index,item.originValue)"
+          >{{item.value}}</el-tag> -->
+          <el-button
+            class="value"
+            @click="goList(index,item.originValue)"
+            type="primary"
+            size="small"
+            round
+          >{{item.value}}</el-button>
         </span>
       </section>
       <section>
@@ -77,19 +84,23 @@ export default {
           this.figureDetail = res.data.data
           this.infoList.push({
             label: '阵营',
-            value: faction[this.figureDetail.faction]
+            value: faction[this.figureDetail.faction],
+            originValue: this.figureDetail.faction
           })
           this.infoList.push({
             label: '种族',
-            value: race[this.figureDetail.race]
+            value: race[this.figureDetail.race],
+            originValue: this.figureDetail.race
           })
           this.infoList.push({
             label: '职业',
-            value: role[this.figureDetail.role]
+            value: role[this.figureDetail.role],
+            originValue: this.figureDetail.role
           })
           this.infoList.push({
             label: '波次',
-            value: wave[this.figureDetail.wave]
+            value: wave[this.figureDetail.wave],
+            originValue: this.figureDetail.wave
           })
           this.imgDataList = this.figureDetail.imgList.split(',')
           this.loopLoadImg(0)
@@ -103,8 +114,14 @@ export default {
         }
       }, 100)
     },
-    goList(index, value) {
-      console.log(index, value)
+    goList(index, originValue) {
+      this.$router.push({
+        name: 'wikiFigures',
+        params: {
+          index: index,
+          originValue: originValue
+        }
+      })
     },
     goBack() {
       window.history.go(-1)

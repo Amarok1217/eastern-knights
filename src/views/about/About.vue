@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <p class="title">关于</p>
-    <p class="info">联系方式：amarok1217@gmail.com</p>
+    <p class="info">联系方式：amarok1217@163.com</p>
     <p class="info">欢迎提出意见和建议</p>
     <p class="info">欢迎投稿优秀摄影作品</p>
     <p class="info">欢迎英语有实力的朋友来协助进行翻译工作</p>

@@ -6,6 +6,7 @@
     <el-button
       class="goDetail"
       type="primary"
+      @click="goFigure"
     >查看详情</el-button>
   </div>
 </template>
@@ -14,6 +15,17 @@ export default {
   name: 'TextBox',
   data() {
     return {}
+  },
+  methods: {
+    goFigure() {
+      this.$router.push({
+        name: 'wikiFigures',
+        params: {
+          index: 3,
+          originValue: 'arethyr'
+        }
+      })
+    }
   }
 }
 </script>
