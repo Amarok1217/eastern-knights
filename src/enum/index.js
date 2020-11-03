@@ -3,6 +3,7 @@ export const wave = {
   arethyr: '炎魔',
   wasteland: '荒原',
   siegeAtBjorngar: '围城',
+  soulSpiller: '噬魂者',
   covenantOfShadows: '暗影契约'
 }
 export const race = {
@@ -11,12 +12,14 @@ export const race = {
   demon: '恶魔',
   dwarf: '矮人',
   orc: '兽人',
+  frostElf: '冰霜精灵',
   vampire: '吸血鬼',
   goblin: '哥布林',
   jaguallian: '豹人',
   lesserDemon: '小恶魔',
   cyclops: '独眼巨人',
   halfGiant: '半巨人',
+  orge: '食人魔',
   unknown: '未知'
 }
 export const role = {
@@ -28,11 +31,15 @@ export const role = {
   swordsman: '剑士',
   darkPrince: '黑暗王子',
   soldier: '士兵',
+  archer: '弓箭兵',
+  bowCaster: '神射手',
+  assassin: '将军',
   warrior: '勇士',
   commander: '指挥官',
   chiefOverseer: '首席督战官',
   hero: '英雄',
   cleric: '牧师',
+  general: '将军',
   god: '神'
 }
 export const faction = {

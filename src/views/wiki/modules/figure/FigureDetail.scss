@@ -56,6 +56,14 @@
     opacity: 0;
     animation-fill-mode: forwards;
   }
+  .officialImg {
+    font-size: 18px;
+    margin-top: 25px;
+    font-weight: 600;
+    animation: 0.5s infoShow ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
   .imgLine {
     flex-wrap: wrap;
     width: 100%;

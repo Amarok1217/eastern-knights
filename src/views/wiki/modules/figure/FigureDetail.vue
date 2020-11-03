@@ -37,6 +37,7 @@
         <p class="biography">{{figureDetail.biography}}</p>
       </section>
     </span>
+    <p class="officialImg">官方图片</p>
     <div
       class="imgLine flex-row"
       v-viewer="{navbar:true,title:false,toolbar:false}"
