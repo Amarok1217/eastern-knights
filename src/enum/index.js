@@ -13,13 +13,16 @@ export const race = {
   dwarf: '矮人',
   orc: '兽人',
   frostElf: '冰霜精灵',
+  shadowElf: '暗影精灵',
   vampire: '吸血鬼',
   goblin: '哥布林',
   jaguallian: '豹人',
   lesserDemon: '小恶魔',
   cyclops: '独眼巨人',
+  troll: '巨魔',
   halfGiant: '半巨人',
   orge: '食人魔',
+  uubyr: '兽人吸血鬼',
   unknown: '未知'
 }
 export const role = {
@@ -35,11 +38,15 @@ export const role = {
   bowCaster: '神射手',
   assassin: '将军',
   warrior: '勇士',
+  ranger: '游侠',
   commander: '指挥官',
   chiefOverseer: '首席督战官',
   hero: '英雄',
   cleric: '牧师',
   general: '将军',
+  mercenary: '雇佣兵',
+  temptress: '魅惑者',
+  monster: '怪物',
   god: '神'
 }
 export const faction = {
@@ -53,7 +60,8 @@ export const faction = {
   theConvocationOfBassyliaL: '法师议会',
   theCircleOfPoxxus: '邪魔密社',
   theHouseOfTheNobleBear: '巨熊战团',
-  theSonsOfTheRedStar: '赤星之子'
+  theSonsOfTheRedStar: '赤星之子',
+  none: '无阵营'
 }
 export const getArr = (obj) => {
   let result = []

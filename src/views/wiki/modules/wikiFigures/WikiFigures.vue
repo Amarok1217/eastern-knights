@@ -48,11 +48,16 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$route.params)
+    if (this.$store.state.figurePageNo > 0) {
+      this.pageNo = this.$store.state.figurePageNo
+      console.log(this.pageNo)
+    }
     if (Object.keys(this.$route.params).length > 0) {
+      this.pageNo = 1
       this.$refs.wikiSearchLine.initSearchCfg(this.$route.params)
     }
-    this.$refs.wikiSearchLine.startSearch()
+    this.$store.commit('updatePageFigureNo', 1)
+    this.initList()
   },
   methods: {
     startSearch() {
@@ -83,6 +88,7 @@ export default {
       this.initList()
     },
     goDetail(item) {
+      this.$store.commit('updatePageFigureNo', this.pageNo)
       this.$router.push({
         name: 'figureDetail',
         query: {
