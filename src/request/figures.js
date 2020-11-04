@@ -12,3 +12,9 @@ export const getFigureById = params => {
     { params }
   )
 }
+// 获取玩家作品
+export const getFansImgById = params => {
+  return axios.get('/getFansImgById',
+    { params }
+  )
+}

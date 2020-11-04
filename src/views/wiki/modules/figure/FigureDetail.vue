@@ -55,10 +55,32 @@
         />
       </div>
     </div>
+    <p
+      class="officialImg"
+      v-if="fansImgList.length>0"
+    >玩家作品</p>
+    <div
+      class="imgLine flex-row"
+      v-viewer="{navbar:true,title:false,toolbar:false}"
+      v-if="fansImgList.length>0"
+    >
+      <div
+        class="imgBox"
+        v-for="(item,index) in fansImgList"
+        :key="index"
+      >
+        <img
+          class="imgItem"
+          :src="item.imgUrl+'?x-oss-process=style/zip'"
+          :style="`animation-delay: ${0.05*index}s;`"
+          loading="lazy"
+        />
+      </div>
+    </div>
   </div>
 </template>
 <script type="text/ecmascript-6">
-import { getFigureById } from '@/request/figures'
+import { getFigureById, getFansImgById } from '@/request/figures'
 import { faction, wave, race, role } from '@/enum'
 
 export default {
@@ -68,6 +90,8 @@ export default {
       figureDetail: {},
       infoList: [],
       imgList: [],
+      fansImgDataList: [],
+      fansImgList: [],
       imgDataList: [],
       options: { movable: true, zoomable: true },
       publicPath: process.env.BASE_URL
@@ -84,6 +108,7 @@ export default {
       getFigureById(params).then((res) => {
         if (res.status === 200) {
           this.figureDetail = res.data.data
+          this.initFansImg()
           this.infoList.push({
             label: '阵营',
             value: faction[this.figureDetail.faction],
@@ -106,6 +131,14 @@ export default {
           })
           this.imgDataList = this.figureDetail.imgList.split(',')
           this.loopLoadImg(0)
+        }
+      })
+    },
+    initFansImg() {
+      let params = { id: this.figureDetail.id }
+      getFansImgById(params).then((res) => {
+        if (res.status === 200) {
+          this.fansImgList = res.data.data
         }
       })
     },

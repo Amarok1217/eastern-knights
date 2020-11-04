@@ -77,6 +77,7 @@ export default {
         console.log(res.data.data)
       })
     },
+
     changePageNum(num) {
       this.pageNo = num
       this.initList()
