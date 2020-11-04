@@ -42,15 +42,14 @@ export default {
   data() {
     return {
       figureList: [],
-      total: 0,
+      total: null,
       pageSize: 12,
       pageNo: 1
     }
   },
   mounted() {
-    if (this.$store.state.figurePageNo > 0) {
+    if (this.$store.state.figurePageNo > 1) {
       this.pageNo = this.$store.state.figurePageNo
-      console.log(this.pageNo)
     }
     if (Object.keys(this.$route.params).length > 0) {
       this.pageNo = 1
@@ -79,7 +78,7 @@ export default {
         this.$nextTick(() => {
           this.figureList = res.data.data.res
         })
-        console.log(res.data.data)
+        console.log(this.pageNo)
       })
     },
 
