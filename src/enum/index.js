@@ -5,6 +5,7 @@ export const wave = {
   siegeAtBjorngar: '围城',
   soulSpiller: '噬魂者',
   coliseum: '竞技场',
+  adventOfDecay: '潮腐',
   covenantOfShadows: '暗影契约'
 }
 export const race = {
@@ -16,6 +17,7 @@ export const race = {
   skeleton: '骷髅',
   frostElf: '冰霜精灵',
   shadowElf: '暗影精灵',
+  elf: '精灵',
   vampire: '吸血鬼',
   goblin: '哥布林',
   jaguallian: '豹人',
@@ -25,12 +27,15 @@ export const race = {
   halfGiant: '半巨人',
   orge: '食人魔',
   uubyr: '兽人吸血鬼',
+  barrios: '野猪人',
+  forestElemental: '森林元素',
   unknown: '未知'
 }
 export const role = {
   all: '全部职业',
   leader: '领袖',
   advisor: '顾问',
+  templarKnight: '圣殿骑士',
   destroyer: '毁灭者',
   warlord: '战争领主',
   swordsman: '剑士',
@@ -46,6 +51,7 @@ export const role = {
   chiefOverseer: '首席督战官',
   hero: '英雄',
   cleric: '牧师',
+  necromancer: '死灵法师',
   general: '将军',
   guard: '守卫',
   mercenary: '雇佣兵',
@@ -54,6 +60,7 @@ export const role = {
   champion: '竞技场冠军',
   formerGladiator: '前角斗士',
   gladiator: '角斗士',
+  queen: '皇后',
   god: '神'
 }
 export const faction = {
@@ -64,7 +71,7 @@ export const faction = {
   theCongregationOfNecronominus: '不死教团',
   xylonasFlock: '鹿林盟军',
   illythiasBrood: '伊氏血族',
-  theConvocationOfBassyliaL: '法师议会',
+  theConvocationOfBassylia: '法师议会',
   theCircleOfPoxxus: '邪魔密社',
   theHouseOfTheNobleBear: '巨熊战团',
   theSonsOfTheRedStar: '赤星之子',
