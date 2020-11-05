@@ -4,6 +4,7 @@ export const wave = {
   wasteland: '荒原',
   siegeAtBjorngar: '围城',
   soulSpiller: '噬魂者',
+  coliseum: '竞技场',
   covenantOfShadows: '暗影契约'
 }
 export const race = {
@@ -12,6 +13,7 @@ export const race = {
   demon: '恶魔',
   dwarf: '矮人',
   orc: '兽人',
+  skeleton: '骷髅',
   frostElf: '冰霜精灵',
   shadowElf: '暗影精灵',
   vampire: '吸血鬼',
@@ -32,6 +34,7 @@ export const role = {
   destroyer: '毁灭者',
   warlord: '战争领主',
   swordsman: '剑士',
+  mage: '法师',
   darkPrince: '黑暗王子',
   soldier: '士兵',
   archer: '弓箭兵',
@@ -44,9 +47,13 @@ export const role = {
   hero: '英雄',
   cleric: '牧师',
   general: '将军',
+  guard: '守卫',
   mercenary: '雇佣兵',
   temptress: '魅惑者',
   monster: '怪物',
+  champion: '竞技场冠军',
+  formerGladiator: '前角斗士',
+  gladiator: '角斗士',
   god: '神'
 }
 export const faction = {

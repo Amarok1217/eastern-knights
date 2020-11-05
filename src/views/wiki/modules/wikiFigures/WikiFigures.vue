@@ -78,7 +78,6 @@ export default {
         this.$nextTick(() => {
           this.figureList = res.data.data.res
         })
-        console.log(this.pageNo)
       })
     },
 

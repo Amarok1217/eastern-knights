@@ -87,9 +87,7 @@ export default {
   mounted() {},
   methods: {
     initSearchCfg(params) {
-      console.log(params)
       this[this.tagList[params.index]] = params.originValue
-      console.log(this.faction)
     },
     startSearch() {
       this.$emit('startSearch')
