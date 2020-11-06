@@ -9,6 +9,7 @@ import About from '@/views/about/About'
 import WikiFigures from '@/views/wiki/modules/wikiFigures/WikiFigures'
 import FigureDetail from '@/views/wiki/modules/figure/FigureDetail'
 
+import MHome from '@/views/mobile/mHome/MHome'
 Vue.use(Router)
 
 export default new Router({
@@ -53,6 +54,11 @@ export default new Router({
           component: About
         }
       ]
+    },
+    {
+      path: '/MHome',
+      name: 'MHome',
+      component: MHome
     }
     // {
     //   path: '/about',
