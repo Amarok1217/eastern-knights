@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import { isPC } from '@/utils'
 import Home from './views/home/Home.vue'
 import HomePage from '@/views/homePage/HomePage'
 import OfficialMsg from '@/views/officialMsg/OfficialMsg'
@@ -10,6 +11,7 @@ import WikiFigures from '@/views/wiki/modules/wikiFigures/WikiFigures'
 import FigureDetail from '@/views/wiki/modules/figure/FigureDetail'
 
 import MHome from '@/views/mobile/mHome/MHome'
+import MWiki from '@/views/mobile/mWiki/MWiki'
 Vue.use(Router)
 
 export default new Router({
@@ -18,7 +20,7 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
-      redirect: '/homePage',
+      redirect: isPC() ? '/homePage' : 'mHome',
       children: [
         {
           path: '/homePage',
@@ -56,9 +58,14 @@ export default new Router({
       ]
     },
     {
-      path: '/MHome',
-      name: 'MHome',
+      path: '/mHome',
+      name: 'mHome',
       component: MHome
+    },
+    {
+      path: '/mWiki',
+      name: 'mWiki',
+      component: MWiki
     }
     // {
     //   path: '/about',

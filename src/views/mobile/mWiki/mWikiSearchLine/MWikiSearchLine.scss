@@ -1,0 +1,29 @@
+@import '@/styles/color';
+.searchLineBox {
+  width: 100%;
+  background-color: rgba(239, 243, 246, 1);
+  .lineBox {
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    .searchItem {
+      width: 24%;
+      height: 2.5rem;
+      border-right: solid 1px $textColor;
+      justify-content: center;
+      .currentTag {
+        color: $textColor;
+        font-size: 0.8rem;
+      }
+      .arrowIcon {
+        color: $textColor;
+        font-size: 0.8rem;
+        margin-left: 0.1rem;
+      }
+
+      //   background-color: $btnColor;
+      //   border-radius: 0.4rem;
+    }
+  }
+}

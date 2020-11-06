@@ -1,0 +1,18 @@
+@import '@/styles/color';
+.mobileHeader {
+  width: 100%;
+  height: 3.5rem;
+  background-color: $headerColor;
+  justify-content: space-around;
+  position: relative;
+  .mobileTitle {
+    font-size: 1rem;
+    color: $textColor;
+  }
+  .backBtn {
+    font-size: 1.5rem;
+    position: absolute;
+    color: $btnColor;
+    left: 0.5rem;
+  }
+}

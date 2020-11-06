@@ -1,0 +1,18 @@
+.mWiki {
+  width: 100%;
+  .searchLine {
+    animation: 0.5s lineShow ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes lineShow {
+  0% {
+    opacity: 0;
+    transform: translateY(-0.3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

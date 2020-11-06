@@ -84,6 +84,7 @@ export const getArr = (obj) => {
       const element = obj[key]
       result.push({
         label: element,
+        text: element,
         value: key
       })
     }

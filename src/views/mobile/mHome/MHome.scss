@@ -1,0 +1,30 @@
+@import '@/styles/color';
+.mobileHome {
+  width: 100%;
+  min-height: 100%;
+  background-color: $bgColor;
+  .itemTag {
+    width: 20rem;
+    height: 3.5rem;
+    background-color: $btnColor;
+    border-radius: 0.7rem;
+    line-height: 3.5rem;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0.5rem;
+    animation: 0.5s figureShow ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  }
+}
+@keyframes figureShow {
+  0% {
+    opacity: 0;
+    transform: translateY(0.3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}

@@ -4,6 +4,7 @@ const productionGzipExtensions = ['js', 'css']
 
 module.exports = {
   publicPath: '/',
+
   configureWebpack: {
     externals: {
       AMap: 'AMap'
@@ -63,5 +64,23 @@ module.exports = {
       })
     ]
 
+  },
+
+  css: {
+    loaderOptions: {
+      stylus: {
+        'resolve url': true,
+        'import': [
+          './src/theme'
+        ]
+      }
+    }
+  },
+
+  pluginOptions: {
+    'cube-ui': {
+      postCompile: true,
+      theme: true
+    }
   }
 }
