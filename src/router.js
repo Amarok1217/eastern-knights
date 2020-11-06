@@ -12,6 +12,7 @@ import FigureDetail from '@/views/wiki/modules/figure/FigureDetail'
 
 import MHome from '@/views/mobile/mHome/MHome'
 import MWiki from '@/views/mobile/mWiki/MWiki'
+import MFigureDetail from '@/views/mobile/mWiki/mFigureDetail/MFigureDetail'
 Vue.use(Router)
 
 export default new Router({
@@ -66,7 +67,13 @@ export default new Router({
       path: '/mWiki',
       name: 'mWiki',
       component: MWiki
+    },
+    {
+      path: '/mFigureDetail',
+      name: 'mFigureDetail',
+      component: MFigureDetail
     }
+
     // {
     //   path: '/about',
     //   name: 'about',

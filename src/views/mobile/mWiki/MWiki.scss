@@ -5,6 +5,16 @@
     opacity: 0;
     animation-fill-mode: forwards;
   }
+  .scrollBox {
+    .dataBox {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    //   padding-bottom: 7rem;
+    }
+  }
 }
 @keyframes lineShow {
   0% {

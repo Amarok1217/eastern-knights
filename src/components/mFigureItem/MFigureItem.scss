@@ -1,4 +1,38 @@
 .mFigureItemBox {
-  width: 22rem;
-  height: 5rem;
+  width: 10.5rem;
+  height: 15rem;
+  background-color: rgba(239, 243, 246, 1);
+  margin-top: 0.8rem;
+  position: relative;
+  border-radius: 0.6rem;
+  animation: 0.5s lineShow ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  .cover {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  .textBox {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    border-radius: 0 0 0.5rem 0.5rem;
+    background-color: rgba(0, 3, 7, 0.7);
+    height: 2rem;
+    .cnName {
+      font-size: 0.7rem;
+      color: #ffffff;
+      margin-left: 0.5rem;
+      margin-top: 0.6rem;
+    }
+  }
+}
+@keyframes lineShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -42,15 +42,19 @@ export default {
       wave: 'all',
       waveOptions: getArr(wave),
       waveName: '全部波次',
+      waveIndex: 0,
       race: 'all',
       raceOptions: getArr(race),
       raceName: '全部种族',
+      raceIndex: 0,
       role: 'all',
       roleOptions: getArr(role),
       roleName: '全部职业',
+      roleIndex: 0,
       faction: 'all',
       factionOptions: getArr(faction),
       factionName: '全部阵营',
+      factionIndex: 0,
       currentTag: ''
     }
   },
@@ -68,6 +72,7 @@ export default {
         this.picker.$updateProps({
           title: this.getOptions(tagName).title,
           data: [this.getOptions(tagName).options],
+          selectedIndex: [this[`${this.currentTag}Index`] || 0],
           onSelect: this.selectHandle,
           onCancel: this.cancelHandle
         })
@@ -75,8 +80,9 @@ export default {
       this.picker.show()
     },
     selectHandle(selectedVal, selectedIndex, selectedText) {
-      this[this.currentTag] = selectedVal
+      this[this.currentTag] = selectedVal[0]
       this[`${this.currentTag}Name`] = selectedText[0]
+      this[`${this.currentTag}Index`] = selectedIndex[0]
       this.$emit('selected')
       this.currentTag = ''
     },

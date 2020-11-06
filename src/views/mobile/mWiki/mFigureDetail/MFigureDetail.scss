@@ -1,0 +1,86 @@
+.mFigureDetail {
+  width: 100%;
+  .nameLine {
+    animation: 0.5s infoShow ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    .cnName {
+      margin-top: 1.5rem;
+      font-size: 2rem;
+      font-weight: 600;
+      max-width: 10rem;
+      margin-left: 1rem;
+    }
+    .name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-left: 1rem;
+      margin-top: 1rem;
+    }
+  }
+  .infoBox {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    .infoLine {
+      margin-top: 0.5rem;
+      animation: 0.5s infoShow ease-out;
+      opacity: 0;
+      animation-fill-mode: forwards;
+      .label {
+        font-size: 1rem;
+      }
+      .value {
+        // font-size: 14px;
+        margin-left: 0.5rem;
+        // cursor: pointer;
+      }
+
+      // .value:hover {
+      //   transition: all 0.2s;
+      //   transform: scale(1.1);
+      //   box-shadow: 0px 0px 15px $btnColor;
+      // }
+    }
+    .biography {
+      padding-top: 1rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-right: 1rem;
+    }
+  }
+  .name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  .imgBox {
+    margin-top: 1rem;
+    width: 100%;
+    .imgItem {
+      width: 22rem;
+      margin-bottom: 0.5rem;
+      border-radius: 0.5rem;
+    }
+  }
+}
+@keyframes figureShow {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes infoShow {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

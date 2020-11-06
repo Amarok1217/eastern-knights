@@ -12,11 +12,18 @@
       ref="mWikiSearchLine"
       @selected="selected"
     ></MWikiSearchLine>
-    <div class="flex-column-center">
-      <MFigureItem
-        v-for="(item,index) in figureList"
-        :key="index"
-      ></MFigureItem>
+    <div class="scrollBox">
+      <div
+        class="dataBox flex-row-center"
+        v-infinite-scroll="onPullingUp"
+      >
+        <MFigureItem
+          v-for="(item,index) in figureList"
+          :key="index"
+          :figureData="item"
+          @click.native="goDetail(item)"
+        ></MFigureItem>
+      </div>
     </div>
   </div>
 </template>
@@ -36,17 +43,21 @@ export default {
   data() {
     return {
       total: null,
-      pageSize: 12,
+      pageSize: 8,
       pageNo: 1,
       figureList: []
     }
   },
   mounted() {
+    this.pageNo = 1
+    this.figureList = []
     this.initData()
   },
   methods: {
     selected() {
-      console.log('startSearch')
+      this.pageNo = 1
+      this.figureList = []
+      this.initData()
     },
     initData() {
       let params = {
@@ -58,12 +69,22 @@ export default {
         pageNo: this.pageNo
       }
       getFigureList(params).then((res) => {
-        this.figureList = []
+        for (const item of res.data.data.res) {
+          this.figureList.push(item)
+        }
         this.total = res.data.data.total
-        this.$nextTick(() => {
-          this.figureList = res.data.data.res
-        })
       })
+    },
+    onPullingUp() {
+      this.pageNo++
+      this.initData()
+    },
+    goDetail(item) {
+      let routeUrl = this.$router.resolve({
+        path: '/mFigureDetail',
+        query: { id: item.id }
+      })
+      window.open(routeUrl.href, '_blank')
     },
     goBack() {
       window.history.go(-1)

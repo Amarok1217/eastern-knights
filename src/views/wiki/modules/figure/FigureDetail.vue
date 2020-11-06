@@ -7,7 +7,7 @@
       size="small"
       @click="goBack"
     >返回</el-button>
-    <span class="nameLine flex-row-bottom">
+    <span class="nameLine ">
       <p class="cnName">{{figureDetail.cnName}}</p>
       <p class="name">{{figureDetail.name}}</p>
     </span>
