@@ -38,6 +38,23 @@
         lazy
       ></el-image>
     </section>
+    <p
+      class="name"
+      v-if="fansImgList.length>0"
+    >玩家作品</p>
+    <section
+      class="imgBox flex-column-center"
+      v-if="fansImgList.length>0"
+    >
+      <el-image
+        class="imgItem"
+        v-for="(item,index) in fansImgList"
+        :key="index"
+        :src="`${item.imgUrl}?x-oss-process=style/mini`"
+        fit="cover"
+        lazy
+      ></el-image>
+    </section>
 
   </div>
 </template>
