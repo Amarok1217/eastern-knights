@@ -5,8 +5,8 @@ export const wave = {
   siegeAtBjorngar: '围城',
   soulSpiller: '噬魂者',
   coliseum: '竞技场',
-  adventOfDecay: '潮腐',
-  covenantOfShadows: '暗影契约'
+  adventOfDecay: '潮腐'
+  // covenantOfShadows: '暗影契约'
 }
 export const race = {
   all: '全部种族',
