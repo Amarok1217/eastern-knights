@@ -14,7 +14,9 @@ export const race = {
   demon: '恶魔',
   dwarf: '矮人',
   orc: '兽人',
+  angel: '天使',
   skeleton: '骷髅',
+  ghost: '幽灵',
   frostElf: '冰霜精灵',
   shadowElf: '暗影精灵',
   elf: '精灵',
@@ -44,7 +46,8 @@ export const role = {
   soldier: '士兵',
   archer: '弓箭兵',
   bowCaster: '神射手',
-  assassin: '将军',
+  assassin: '刺客',
+  paladin: '圣骑士',
   warrior: '勇士',
   ranger: '游侠',
   commander: '指挥官',
@@ -61,6 +64,7 @@ export const role = {
   formerGladiator: '前角斗士',
   gladiator: '角斗士',
   queen: '皇后',
+  fighter: '斗士',
   god: '神'
 }
 export const faction = {
