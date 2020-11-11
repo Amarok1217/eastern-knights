@@ -6,9 +6,9 @@ module.exports = {
   publicPath: '/',
 
   configureWebpack: {
-    externals: {
-      AMap: 'AMap'
-    },
+    // externals: {
+    //   AMap: 'AMap'
+    // },
     plugins: [
       new HtmlWebpackExternalsPlugin({
         externals: [
@@ -22,6 +22,11 @@ module.exports = {
           //     entry: 'https://cdn.bootcdn.net/ajax/libs/echarts/4.2.1/echarts-en.common.js',
           //     global: 'echarts'
           //   },
+          {
+            module: 'cube-ui',
+            entry: 'https://unpkg.com/cube-ui/lib/cube.min.js',
+            global: 'cube-ui'
+          },
           {
             module: 'vue-router',
             entry: 'https://cdn.bootcdn.net/ajax/libs/vue-router/3.0.3/vue-router.min.js',

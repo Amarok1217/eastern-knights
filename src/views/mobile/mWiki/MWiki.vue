@@ -12,11 +12,12 @@
       ref="mWikiSearchLine"
       @selected="selected"
     ></MWikiSearchLine>
-    <div class="scrollBox">
-      <div
-        class="dataBox flex-row-center"
-        v-infinite-scroll="onPullingUp"
-      >
+    <div
+      class="scrollBox"
+      v-infinite-scroll="onPullingUp"
+      infinite-scroll-immediate="false"
+    >
+      <div class="dataBox flex-row-center">
         <MFigureItem
           v-for="(item,index) in figureList"
           :key="index"
