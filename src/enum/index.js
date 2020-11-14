@@ -5,7 +5,8 @@ export const wave = {
   siegeAtBjorngar: '围城',
   soulSpiller: '噬魂者',
   coliseum: '竞技场',
-  adventOfDecay: '潮腐'
+  adventOfDecay: '潮腐',
+  illythia: '伊利西亚'
   // covenantOfShadows: '暗影契约'
 }
 export const race = {
@@ -31,6 +32,9 @@ export const race = {
   uubyr: '兽人吸血鬼',
   barrios: '野猪人',
   forestElemental: '森林元素',
+  moose: '麋鹿',
+  centaur: '半人马',
+  vogyrr: '巨型吸血鬼',
   unknown: '未知'
 }
 export const role = {
@@ -65,6 +69,10 @@ export const role = {
   gladiator: '角斗士',
   queen: '皇后',
   fighter: '斗士',
+  steed: '坐骑',
+  stableLord: '厩主',
+  princess: '公主',
+  bodyguard: '血肉守卫',
   god: '神'
 }
 export const faction = {
