@@ -73,6 +73,8 @@ export const role = {
   stableLord: '厩主',
   princess: '公主',
   bodyguard: '血肉守卫',
+  sorceress: '女巫',
+  barbarian: '野蛮人',
   god: '神'
 }
 export const faction = {
@@ -89,7 +91,7 @@ export const faction = {
   theSonsOfTheRedStar: '赤星之子',
   none: '无阵营'
 }
-export const getArr = (obj) => {
+export const getArr = obj => {
   let result = []
   for (const key in obj) {
     if (obj.hasOwnProperty(key)) {
