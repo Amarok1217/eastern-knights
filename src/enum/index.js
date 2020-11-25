@@ -35,6 +35,7 @@ export const race = {
   moose: '麋鹿',
   centaur: '半人马',
   vogyrr: '巨型吸血鬼',
+  woodElf: '木精灵',
   unknown: '未知'
 }
 export const role = {
