@@ -76,6 +76,8 @@ export const role = {
   bodyguard: '血肉守卫',
   sorceress: '女巫',
   barbarian: '野蛮人',
+  highPriestess: '高阶女祭司',
+  defender: '护卫',
   god: '神'
 }
 export const faction = {
